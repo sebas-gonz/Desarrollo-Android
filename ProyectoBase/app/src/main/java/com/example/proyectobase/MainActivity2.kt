@@ -36,6 +36,14 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(nuevaVentana)
         }
 
+        val btn_calculadora: Button = findViewById(R.id.btn_calculadora)
+        btn_calculadora.setOnClickListener {
+
+            val nuevaVentana = Intent(this, MainActivity4::class.java)
+
+            startActivity(nuevaVentana)
+        }
+
         val duracion = Toast.LENGTH_SHORT
         val toast = Toast.makeText(this, "bienvenido $usuarioDesdeOtroActivity", duracion)
         toast.show()

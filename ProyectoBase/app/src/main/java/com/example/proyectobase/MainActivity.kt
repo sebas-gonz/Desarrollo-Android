@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val txMensaje:TextView = findViewById(R.id.tx_mensaje)
 
         // variables para comparar password
-        var usuarioBase = "ch.munozs@profesor.duoc.cl"
+        var usuarioBase = "seba.gonzalez@duoc.cl"
         var passwBase = "admin123"
 
         btnLogin.setOnClickListener {
