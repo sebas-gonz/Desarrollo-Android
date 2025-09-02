@@ -5,7 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+import com.example.proyectobase.utils.OpMatematica
 class MainActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,10 +17,11 @@ class MainActivity4 : AppCompatActivity() {
         val btn_sumar = findViewById<android.widget.Button>(R.id.btn_calcular)
         val tx_resultado = findViewById<android.widget.TextView>(R.id.tx_resultado)
 
+
         btn_sumar.setOnClickListener {
             val num1 = ed_num1.text.toString().toDoubleOrNull() ?: 0.0
             val num2 = ed_num2.text.toString().toDoubleOrNull() ?: 0.0
-            val resultado = num1 + num2
+            val resultado = OpMatematica.dividir(num1, num2)
             tx_resultado.text = "Resultado: $resultado"
         }
 

@@ -28,6 +28,12 @@ class MainActivity2 : AppCompatActivity() {
         val recibeContrasena = intent.getStringExtra("par_contrasena")
 
         val btn_avanzar: Button = findViewById(R.id.btn_avanzar)
+        val btn_convertidor: Button = findViewById(R.id.btn_convertidor)
+        btn_convertidor.setOnClickListener {
+            val nuevaVentana = Intent(this, MainActivity5::class.java)
+
+            startActivity(nuevaVentana)
+        }
 
         btn_avanzar.setOnClickListener {
 
