@@ -29,10 +29,12 @@ class MainActivity3 : AppCompatActivity() {
             val dia = c.get(Calendar.DAY_OF_MONTH)
 
             val calendario =
-                DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
+                DatePickerDialog(this,
+                { _, selectedYear, selectedMonth, selectedDay ->
                 val fecha = "%02d/%02d/%04d".format(selectedDay, selectedMonth + 1, selectedYear)
                 ed_fechaNacimiento.setText(fecha)
-            }, anio, mes, dia)
+                },
+                anio, mes, dia)
 
             calendario.show()
         }

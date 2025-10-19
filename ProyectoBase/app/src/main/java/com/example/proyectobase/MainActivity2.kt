@@ -29,6 +29,19 @@ class MainActivity2 : AppCompatActivity() {
 
         val btn_avanzar: Button = findViewById(R.id.btn_avanzar)
         val btn_convertidor: Button = findViewById(R.id.btn_convertidor)
+        val btn_lista: Button = findViewById(R.id.btn_lista)
+        val btn_api: Button = findViewById(R.id.btn_api)
+        btn_api.setOnClickListener {
+            val nuevaVentana = Intent(this, IntegracionApi::class.java)
+            startActivity(nuevaVentana)
+        }
+        btn_lista.setOnClickListener {
+            val nuevaVentana = Intent(this, MainActivity6::class.java)
+
+            startActivity(nuevaVentana)
+        }
+
+
         btn_convertidor.setOnClickListener {
             val nuevaVentana = Intent(this, MainActivity5::class.java)
 
